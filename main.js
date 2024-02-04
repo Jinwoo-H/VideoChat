@@ -47,10 +47,10 @@ window.onload = async () => {
 
     });
 
-    //Mutes local audio stream
-    localStream.getAudioTracks().forEach(track => {
-      track.enabled = false;
-    });
+    // //Mutes local audio stream
+    // localStream.getAudioTracks().forEach(track => {
+    //   track.enabled = false;
+    // });
   
     // Pull tracks from remote stream, add to video stream
     pc.ontrack = (event) => {
