@@ -16,28 +16,6 @@ if (!firebase.apps.length) {
 }
 const firestore = firebase.firestore();
 
-// import { initializeApp } from "firebase/app";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
-
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBewHNOKLPFaasaj0FvtOJEe2-7VhC8sAU",
-//   authDomain: "webrtc-ed66f.firebaseapp.com",
-//   projectId: "webrtc-ed66f",
-//   storageBucket: "webrtc-ed66f.appspot.com",
-//   messagingSenderId: "903277969424",
-//   appId: "1:903277969424:web:376ce4db61434b5b1dca95",
-//   measurementId: "G-3MP4ZJRV9G"
-// };
-
-// // Initialize Firebase
-// const firebase = initializeApp(firebaseConfig);
-// const firestore = firebase.firestore();
-
-
-
 const servers = {
   iceServers: [
     {
@@ -59,7 +37,7 @@ const answerButton = document.getElementById('answerButton');
 const remoteVideo = document.getElementById('remoteVideo');
 const hangupButton = document.getElementById('hangupButton');
 
-webcamButton.onclick = async () => {
+window.onload = async () => {
   localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
   remoteStream = new MediaStream();
 
